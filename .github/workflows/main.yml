@@ -22,6 +22,8 @@ jobs:
           DOCKERHUB_TOKEN: ${{ secrets.DOCKERHUB_TOKEN }}
         run: echo $DOCKERHUB_TOKEN | docker login -u $DOCKERHUB_USERNAME --password-stdin
 
-      - name: Push Docker image to Docker Hub
+      - name: Create Docker image to Docker Hub
         run: docker tag my-docker-app:latest $DOCKERHUB_USERNAME/usf:latest
+        
+      - name: Push Docker image to Docker Hub
         run: docker push $DOCKERHUB_USERNAME/usf:latest
