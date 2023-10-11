@@ -16,6 +16,10 @@ import timm
 
 def convertor(pdf_path, output_dir, image_format='JPEG', dpi=200):
     pages = convert_from_path(pdf_path, dpi=dpi)
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    if not os.path.exists(r"pdfToJpeg/pdfs"):
+        os.makedirs(r"pdfToJpeg/pdfs")
     for idx, page in enumerate(pages):
         image_path = f"{output_dir}/page_{idx + 1}.{image_format.lower()}"
         page.save(image_path, image_format)
