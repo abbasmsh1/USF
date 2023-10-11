@@ -1,0 +1,68 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    align-items: center;
+}
+
+h1 {
+    color: #fff;
+    align-self: center;
+}
+header
+{
+    height:100vh;
+    max-height: 100vh;
+    min-height: 100vh;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    align-items: center;
+    padding:auto;
+}
+
+input[type="file"] {
+    margin-bottom: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+}
+
+input[type="submit"] {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+td {
+    color: green;
+    font-weight: bold;
+}
+
+table {
+    width: 40%;
+    border-collapse: collapse;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+th {
+    background-color: #f2f2f2;
+}
